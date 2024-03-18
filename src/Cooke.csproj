@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <DebugType>embedded</DebugType>
-    <FileVersion>0.0.1</FileVersion>
+    <FileVersion>0.0.2</FileVersion>
   </PropertyGroup>
 
 </Project>

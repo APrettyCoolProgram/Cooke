@@ -5,26 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,73 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Utility.cs",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Utility.cs",
-              "RelativeDocumentMoniker": "Utility.cs",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Utility.cs",
-              "RelativeToolTip": "Utility.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:44:21.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReleaseNote.cs",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\ReleaseNote.cs",
-              "RelativeDocumentMoniker": "ReleaseNote.cs",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\ReleaseNote.cs",
-              "RelativeToolTip": "ReleaseNote.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:44:16.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:44:10.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Changelog.cs",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Changelog.cs",
-              "RelativeDocumentMoniker": "Changelog.cs",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Changelog.cs",
-              "RelativeToolTip": "Changelog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:44:03.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppConfig.cs",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\AppConfig.cs",
-              "RelativeDocumentMoniker": "AppConfig.cs",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\AppConfig.cs",
-              "RelativeToolTip": "AppConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:43:57.035Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -109,9 +24,9 @@
               "RelativeDocumentMoniker": "Cooke.csproj",
               "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj",
               "RelativeToolTip": "Cooke.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-18T12:43:43.259Z",
+              "WhenOpened": "2024-03-18T12:56:17.369Z",
               "EditorCaption": ""
             }
           ]
