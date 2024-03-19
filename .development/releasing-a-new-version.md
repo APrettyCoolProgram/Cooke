@@ -1,4 +1,4 @@
-# Deploying a new version of Cooke
+# Releasing a new version of Cooke
 
 ## Update AppConfig.CreateDefaultConfigFile()
 

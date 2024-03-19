@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cooke")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.2")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6605c18a967d18dd48706dd4aa0f13d0b7058c56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+442d9edf782f1aac70988c1d736014e33a9aaed6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cooke")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cooke")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿// b240319.0947
+﻿// b240319.1327
 
 namespace Cooke
 {
@@ -9,32 +9,33 @@ namespace Cooke
         /// <param name="appConfig">The object that contains the Cooke configuration settings.</param>
         public static void Generate(AppConfig appConfig)
         {
-            Console.WriteLine($"Cooke: Generating CHANGELOG.md...");
+            Utility.DisplayMsg($"{Environment.NewLine}Cooke: Generating CHANGELOG.md...");
 
-            BuildRawData(appConfig.TemporaryDataFolder, appConfig.ChangelogGitCommand);
+            BuildRawData(appConfig.TempPath, appConfig.ChangelogGitCmd);
 
-            BuildRawChangelog(appConfig.TemporaryDataFolder, appConfig.ChangelogExportLocation, appConfig.ChangelogPublicLocation, appConfig.MonthAbbreviations, appConfig.ChangelogStartTag, appConfig.ChangelogEndTag);
+            BuildRawChangelog(appConfig.TempPath, appConfig.Months, appConfig.ChangelogStartTag, appConfig.ChangelogEndTag);
 
-            Console.WriteLine($"Cooke: CHANGELOG.md file created.");
+            BuildChangelogMd(appConfig.TempPath, appConfig.ChangelogRawPath, appConfig.ChangelogRepoPath, appConfig.RepoName, appConfig.ChangelogIncludeName, appConfig.ChangelogKeepHistory);
+
+            Utility.DisplayMsg($"Cooke: CHANGELOG.md file created.");
         }
 
         /// <summary>Build the raw data from the git log command.</summary>
-        private static void BuildRawData(string temporaryDataFolder, string gitCommand)
+        private static void BuildRawData(string tempDir, string gitCmd)
         {
-            Console.WriteLine("       Building raw data from git log...");
+            Utility.DisplayMsg("       Building raw data from git log...");
 
-            Utility.ExecuteSystemCommand("cmd.exe", $"{gitCommand} > {temporaryDataFolder}changelog-data.raw");
+            Utility.ExeSysCmd("cmd.exe", $"{gitCmd} > {tempDir}changelog-data.raw");
         }
 
         /// <summary>Build the raw CHANGELOG.md file.</summary>
-        /// <param name="temporaryDataFolder">The Cooke temporary folder.</param>
-        /// <param name="changelogExportLocation">The location for the CHANGELOG.md datestamped export.</param>
-        /// <param name="monthAbbreviations">A list of month abreviations.</param>
+        /// <param name="tempDir">The Cooke temporary folder.</param>
+        /// <param name="months">A list of month abreviations.</param>
         /// <param name="startTag">The string that indicates the beginning of a keyword.</param>
         /// <param name="endTag">The string that indicates the end of a keyword.</param>
-        private static void BuildRawChangelog(string temporaryDataFolder, string changelogExportLocation, string changelogPublicLocation, List<string> monthAbbreviations, string startTag, string endTag)
+        private static void BuildRawChangelog(string tempDir, List<string> months, string startTag, string endTag)
         {
-            Console.WriteLine("       Building raw CHANGELOG...");
+            Utility.DisplayMsg("       Building raw changelog data...");
 
             var version = "Current development";
 
@@ -50,7 +51,7 @@ namespace Cooke
 
             Thread.Sleep(1000); // This needs to be here to work? Also in Program.cs
 
-            using (StreamReader rawChangelogFile = new StreamReader($"{temporaryDataFolder}changelog-data.raw"))
+            using (StreamReader rawChangelogFile = new StreamReader($"{tempDir}changelog.raw"))
             {
                 string rawLine;
 
@@ -88,7 +89,7 @@ namespace Cooke
                 {
                     if (versionBlock.Key != "Current development")
                     {
-                        commitDateStamp = FormatCommitDate(versionBlock.Value[0], monthAbbreviations);
+                        commitDateStamp = FormatCommitDate(versionBlock.Value[0], months);
                     }
 
                     if (versionBlock.Value.Count > 0)
@@ -98,35 +99,52 @@ namespace Cooke
                 }
             }
 
-            finalContent = BuildContentHeader() +
-                           contentBody;
+            Utility.DisplayMsg("       Writing raw changelog data...");
+
+            File.WriteAllText($"{tempDir}changelog.content", contentBody);
+        }
+
+        private static void BuildChangelogMd(string tempDir, string exportPath, string repoPath, string repoName, bool includeName, bool keepHistory)
+        {
+            Utility.DisplayMsg("       Building CHANGELOG.md...");
+
+            var contentBody = File.ReadAllText($"{tempDir}changelog.content");
+
+            var finalContent = BuildContentHeader() +
+                               BuildChangelogTitle(repoName, includeName) +
+                               contentBody;
 
             var dateTime= DateTime.Now.ToString("yyMMdd-HHmmss");
 
-            Console.WriteLine("       Writing datestamped CHANGELOG.md...");
-            File.WriteAllText($"{changelogExportLocation}CHANGELOG_{dateTime}.md", finalContent);
+            if (keepHistory)
+            {
+                Utility.DisplayMsg("       Writing datestamped CHANGELOG.md...");
+                File.WriteAllText($"{exportPath}CHANGELOG_{dateTime}.md", finalContent);
+            }
 
-            Console.WriteLine($"       Writing CHANGELOG.md to {changelogPublicLocation}CHANGELOG.md...");
-            File.WriteAllText($"{changelogPublicLocation}CHANGELOG.md", finalContent);
+            Utility.DisplayMsg($"       Writing CHANGELOG.md to {repoPath}CHANGELOG.md...");
+            File.WriteAllText($"{repoPath}CHANGELOG.md", finalContent);
         }
+
+
 
         /// <summary>Build the body of the CHANGELOG.md file.</summary>
         /// <param name="startTag">The string that indicates the beginning of a keyword.</param>
         /// <param name="endTag">The string that indicates the end of a keyword.</param>
-        /// <param name="commitDateStamp">The datestamp of a commit.</param>
-        /// <param name="contentBody">The content body.</param>
-        /// <param name="versionBlock">The collection of version changes.</param>
+        /// <param name="commitStamp">The datestamp of a commit.</param>
+        /// <param name="body">The content body.</param>
+        /// <param name="verBlock">The collection of version changes.</param>
         /// <returns></returns>
-        private static string BuildBody(string startTag, string endTag, string commitDateStamp, string contentBody, KeyValuePair<string, List<string>> versionBlock)
+        private static string BuildBody(string startTag, string endTag, string commitStamp, string body, KeyValuePair<string, List<string>> verBlock)
         {
             var bodyHeader = Environment.NewLine +
-                            $"## {versionBlock.Key}{commitDateStamp}" +
+                            $"## {verBlock.Key}{commitStamp}" +
                             Environment.NewLine +
                             Environment.NewLine;
 
             List<string> sortedList = new List<string>();
 
-            foreach (var line in versionBlock.Value)
+            foreach (var line in verBlock.Value)
             {
                 if (line.StartsWith(startTag))
                 {
@@ -144,23 +162,22 @@ namespace Cooke
         }
 
         /// <summary>Format the commit date.</summary>
-        /// <param name="commitDate">The date of the commit.</param>
-        /// <param name="monthAbbreviations">A list of month abreviations.</param>
+        /// <param name="commitStamp">The date of the commit.</param>
+        /// <param name="months">A list of month abreviations.</param>
         /// <returns>A formated commit date.</returns>
-        public static string FormatCommitDate(string commitDate, List<string> monthAbbreviations)
+        public static string FormatCommitDate(string commitStamp, List<string> months)
         {
-            var commitInfo = commitDate.Replace("CommitDate: ", "");
+            var commitInfo = commitStamp.Replace("CommitDate: ", "");
             var commitPart = commitInfo.Split(' ');
 
             var commitMonthAsText    = commitPart[1];
-            var commitMonthAsInt     = monthAbbreviations.IndexOf(commitMonthAsText)+1;
+            var commitMonthAsInt     = months.IndexOf(commitMonthAsText)+1;
             var commitMonthFormatted = commitMonthAsInt.ToString("00");
             var commitDateFormatted  = commitPart[2];
             var commitYearFull       = commitPart[4];
 
             return $" - {commitYearFull}-{commitMonthFormatted}-{commitDateFormatted}";
         }
-
 
         /// <summary>Build the header of the CHANGELOG.md file.</summary>
         /// <returns>The CHANGELOG.md header.</returns>
@@ -176,12 +193,22 @@ namespace Cooke
                                                       "# CHANGELOG" +
                                                       Environment.NewLine;
 
+        /// <summary>Build the CHANGELOG title.</summary>
+        /// <param name="repoName"></param>
+        /// <param name="includeName"></param>
+        /// <returns></returns>
+        private static string BuildChangelogTitle(string repoName, bool includeName) => (includeName)
+            ? $"# {repoName} CHANGELOG" +
+              Environment.NewLine
+            : "CHANGELOG" +
+              Environment.NewLine;
+
         /// <summary>Build the final content of the CHANGELOG.md file.</summary>
-        /// <param name="contentHeader">The CHANGELOG.md header.</param>
-        /// <param name="contentBody">The generated CHANGELOG.md body</param>
+        /// <param name="header">The CHANGELOG.md header.</param>
+        /// <param name="body">The generated CHANGELOG.md body</param>
         /// <returns>The final CHANGELOG.md content.</returns>
-        private static string BuildFinalContent(string contentHeader, string contentBody) => contentHeader +
-                                                                                             Environment.NewLine +
-                                                                                             contentBody;
+        private static string BuildFinalContent(string header, string body) => header +
+                                                                               Environment.NewLine +
+                                                                               body;
     }
 }

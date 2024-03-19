@@ -1,4 +1,4 @@
-﻿// b240319.0940
+﻿// b240319.1327
 
 using System.Text.Json;
 
@@ -8,41 +8,96 @@ namespace Cooke
     public class AppConfig
     {
         // Cooke specific.
-        public string CookeVersion { get; set; }
-        public string CookeBuild { get; set; }
+
+        /// <summary></summary>
+        public string AppVer { get; set; }
+
+        /// <summary></summary>
+        public bool Verbose { get; set; }
 
         // Repository specific.
-        public string RepositoryName { get; set; }
-        public string RepositoryURL { get; set; }
+
+        /// <summary></summary>
+        public string RepoName { get; set; }
+
+        /// <summary></summary>
+        public string RepoURL { get; set; }
 
         // Common stuff.
-        public string GitFolderLocation { get; set; }
-        public string TemporaryDataFolder { get; set; }
-        public List<string> MonthAbbreviations { get; set; }
+
+        /// <summary></summary>
+        public string DotGitPath { get; set; }
+
+        /// <summary></summary>
+        public string TempPath { get; set; }
+
+        /// <summary></summary>
+        public List<string> Months { get; set; }
 
         //CHANGELOG.md specific.
-        public string ChangelogExportLocation { get; set; }
-        public string ChangelogGitCommand { get; set; }
+
+        /// <summary></summary>
+        public bool ChangelogIncludeName { get; set; }
+
+        /// <summary></summary>
+        public string ChangelogRawPath { get; set; }
+
+        /// <summary></summary>
+        public string ChangelogGitCmd { get; set; }
+
+        /// <summary></summary>
         public string ChangelogStartTag { get; set; }
+
+        /// <summary></summary>
         public string ChangelogEndTag { get; set; }
-        public string ChangelogPublicLocation { get; set; }
+
+        /// <summary></summary>
+        public bool ChangelogKeepHistory { get; set; }
+
+        /// <summary></summary>
+        public string ChangelogRepoPath { get; set; }
 
         //RELEASE-NOTES.md specific
+
+        /// <summary></summary>
         public string ReleaseNoteExportLocation { get; set; }
 
-        /// <summary>Create a Cooke-config.json file with default values.</summary>
-        public static void CreateDefaultConfigFile()
+        /// <summary>Verifies that the configuration file exists, and creates one if it does not.</summary>
+        /// <param name="configPath">Path to the configuration file.</param>
+        public static void Verify(string configPath)
         {
+            if (!File.Exists(configPath))
+            {
+                Create(configPath);
+            }
+        }
+
+        /// <summary>Create a new default configuration file.</summary>
+        /// <param name="configPath">Path to the configuration file.</param>
+        private static void Create(string configPath)
+        {
+            Utility.DisplayMsg(Catalog.Msg.FirstExecution());
+
+            BuildContent(configPath);
+
+            Utility.ExitApp("Cooke: Process complete!");
+        }
+
+        /// <summary>Create the default configuration values.</summary>
+        private static void BuildContent(string configPath)
+        {
+            Utility.DisplayMsg("Cooke: Building default configuration file...");
+
             AppConfig appConfig = new AppConfig
             {
-                CookeVersion        = "0.1.0",
-                CookeBuild          = "240319.0950",
-                RepositoryName      = "Cooke",
-                RepositoryURL       = "https://github.com/APrettyCoolProgram/Cooke",
-                GitFolderLocation   = "../",
-                TemporaryDataFolder = "./temp/",
-                MonthAbbreviations  = new List<string>
-                {
+                AppVer          = "0.1.0+240319.1327",
+                Verbose         = false,
+                RepoName        = "Cooke",
+                RepoURL         = "https://github.com/APrettyCoolProgram/Cooke",
+                DotGitPath      = "../",
+                TempPath        = "./temp/",
+                Months =
+                [
                     "Jan",
                     "Feb",
                     "Mar",
@@ -55,28 +110,44 @@ namespace Cooke
                     "Oct",
                     "Nov",
                     "Dec"
-                },
-                ChangelogExportLocation   = "./changelog/",
-                ChangelogGitCommand       = "git log --pretty=fuller",
+                ],
+                ChangelogIncludeName      = true,
+                ChangelogRawPath          = "./changelog/",
+                ChangelogGitCmd           = "git log --pretty=fuller",
                 ChangelogStartTag         = "[",
                 ChangelogEndTag           = "]",
-                ChangelogPublicLocation   = "../",
+                ChangelogRepoPath         = "../",
                 ReleaseNoteExportLocation = "./releasenotes/",
             };
 
-            var options    = new JsonSerializerOptions { WriteIndented = true };
-            var jsonString = JsonSerializer.Serialize(appConfig, options);
-
-            File.WriteAllText("./Cooke-config.json", jsonString);
+            Save(appConfig, configPath);
         }
 
-        /// <summary>Load the Cooke-config.json file.</summary>
-        /// <returns>The Cooke configuration settings.</returns>
-        public static AppConfig LoadConfigFile()
+        /// <summary>Save the configuration data to a file.</summary>
+        /// <param name="appConfig">The configuration data object.</param>
+        /// <param name="configPath">The path to the configuration file.</param>
+        public static void Save(AppConfig appConfig, string configPath)
         {
-            Console.WriteLine("Cooke: Loading configuration file...");
+            JsonSerializerOptions jsonFormat = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
 
-            string jsonString   = File.ReadAllText(@"./Cooke-config.json");
+            string configData = JsonSerializer.Serialize(appConfig, jsonFormat);
+
+            Utility.DisplayMsg("Cooke: Writing configuration file to disk...", appConfig.Verbose);
+
+            File.WriteAllText(configPath, configData);
+        }
+
+        /// <summary> Load the configuration file.</summary>
+        /// <param name="configPath">Path to the configuration file.</param>
+        /// <returns>The configuration settings.</returns>
+        public static AppConfig Load(string configPath)
+        {
+            Utility.DisplayMsg("Cooke: Loading configuration file...");
+
+            string jsonString = File.ReadAllText(configPath);
 
             return JsonSerializer.Deserialize<AppConfig>(jsonString);
         }

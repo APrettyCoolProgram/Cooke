@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +23,16 @@
       "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\catalog\\msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:catalog\\msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\catalog\\dirlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:catalog\\dirlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,13 +86,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "DirList.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Catalog\\DirList.cs",
+              "RelativeDocumentMoniker": "Catalog\\DirList.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Catalog\\DirList.cs",
+              "RelativeToolTip": "Catalog\\DirList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T16:26:09.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Msg.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Catalog\\Msg.cs",
+              "RelativeDocumentMoniker": "Catalog\\Msg.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Catalog\\Msg.cs",
+              "RelativeToolTip": "Catalog\\Msg.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T16:18:43.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Utility.cs",
               "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Utility.cs",
               "RelativeDocumentMoniker": "Utility.cs",
               "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Utility.cs",
               "RelativeToolTip": "Utility.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFoAAAA9AAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAADwv0cAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T13:50:41.585Z",
               "EditorCaption": ""
@@ -97,53 +131,53 @@
               "RelativeDocumentMoniker": "ReleaseNote.cs",
               "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\ReleaseNote.cs",
               "RelativeToolTip": "ReleaseNote.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T13:50:35.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Changelog.cs",
               "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Changelog.cs",
               "RelativeDocumentMoniker": "Changelog.cs",
               "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Changelog.cs",
               "RelativeToolTip": "Changelog.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAuwLIAAAAVAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAYwB8AAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T13:49:07.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AppConfig.cs",
               "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\AppConfig.cs",
               "RelativeDocumentMoniker": "AppConfig.cs",
               "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\AppConfig.cs",
               "RelativeToolTip": "AppConfig.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAYwCIAAAAJAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAmwDUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T13:46:26.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAUwCkAAABuAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAEgAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T13:43:56.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Cooke.csproj",
               "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
               "RelativeDocumentMoniker": "Cooke.csproj",

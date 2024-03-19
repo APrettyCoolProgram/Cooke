@@ -1,82 +1,91 @@
-﻿// b240319.0915
+﻿// b240319.1327
 
 using System.Diagnostics;
 
 namespace Cooke
 {
-    internal class Utility
+    /// <summary>Utility methods for Cooke.</summary>
+    internal static class Utility
     {
+
+        /// <summary>Verify the Cooke framework.</summary>
+        public static void VerifyFramework(string configPath)
+        {
+            Utility.DisplayMsg("Cooke: Verifying framework...");
+
+            AppConfig.Verify(configPath);
+            VerifyRequiredDirectories();
+        }
+
+        /// <summary>Verify framework directories exist, and create them if they do not.</summary>
+        private static void VerifyRequiredDirectories()
+        {
+            foreach (var dir in Catalog.DirList.RequiredDirectories)
+            {
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+            }
+        }
+
         /// <summary>Executes a system command.</summary>
-        /// <param name="command">The system command.</param>
-        /// <param name="argument">The command arguments.</param>
+        /// <param name="cmd">The system command.</param>
+        /// <param name="arg">The command arguments.</param>
         /// <param name="terminate">Determines if the command should terminate after processing.</param>
         /// <remarks>
         /// - <c>processName</c> example: "cmd"
         /// - <c>processArgument</c> example: "git log"
         /// </remarks>
         /// <see href="https://gist.github.com/APrettyCoolProgram/9e0e3b02632ddb7f8a309783cc2cee10">View the gist</see>
-        public static void ExecuteSystemCommand(string command, string argument, bool terminate = true)
+        public static void ExeSysCmd(string cmd, string arg, bool terminate = true)
         {
             if (terminate)
             {
-                Process.Start(command, $"/c {argument}");
+                Process.Start(cmd, $"/c {arg}");
             }
             else
             {
-                Process.Start(command, argument);
+                Process.Start(cmd, arg);
             }
         }
 
-
-        /// <summary>Verify the Cooke framework.</summary>
-        public static void VerifyRequirements()
+        public static void DisplayMsg(string msg, bool verbose = true)
         {
-            Console.WriteLine($"Cooke: Verifying framework...");
-
-            VerifyAppConfigFile();
-            VerifyRequiredDirectories();
-        }
-
-        /// <summary>Verify the Cooke-config.json file exists, and create it if it does not.</summary>
-        private static void VerifyAppConfigFile()
-        {
-            if (!File.Exists(@"./Cooke-config.json"))
+            if (verbose)
             {
-                Console.WriteLine("Cooke: Creating default configuration file...");
-
-                AppConfig.CreateDefaultConfigFile();
-
-                Console.WriteLine(FirstExecutionMessage());
-
-                Console.WriteLine($"Cooke: Process complete!");
-
-                Environment.Exit(0);
+                Console.WriteLine(msg);
             }
         }
 
-        /// <summary>Verify the directory where Cooke data will be stored.</summary>
-        public static void VerifyRequiredDirectories()
+        /// <summary>
+        ///
+        /// </summary>
+        public static void Reset(string appVer)
         {
-            var requiredDirectories = new List<string>
-            {
-                "./changelog",
-                "./releasenotes",
-                "./temp"
-            };
+            Utility.DisplayMsg("Cooke: Resetting...");
 
-            foreach (var directory in requiredDirectories)
+            foreach (var dir in Catalog.DirList.RequiredDirectories)
             {
-                if (!Directory.Exists(directory))
+                if (Directory.Exists($"./{dir}"))
                 {
-                    Directory.CreateDirectory(directory);
+                    Directory.Delete($"./{dir}", true);
                 }
             }
+
+            if (File.Exists("./cooke-config.json"))
+            {
+                File.Delete("./cooke-config.json");
+            }
+
+            Utility.ExitApp($"Cooke: Process complete! [v{appVer}]");
         }
+
 
         /// <summary>Clean up Cooke.</summary>
         public static void Cleanup()
         {
-            Console.WriteLine($"Cooke: Cleaning up...");
+            Utility.DisplayMsg("Cooke: Cleaning up...");
 
             if (Directory.Exists("./temp"))
             {
@@ -84,20 +93,13 @@ namespace Cooke
             }
         }
 
-        private static string FirstExecutionMessage() => Environment.NewLine +
-                                                         $"  ======= {Environment.NewLine}" +
-                                                         $"  WARNING {Environment.NewLine}" +
-                                                         $"  ======= {Environment.NewLine}" +
-                                                             Environment.NewLine +
-                                                         $"  It looks like this is the first time you are running Cooke {Environment.NewLine}" +
-                                                         $"  for this repository, so a default configuration file has {Environment.NewLine}" +
-                                                          "  been created for you." +
-                                                             Environment.NewLine +
-                                                             Environment.NewLine +
-                                                         $"  Please review the Cooke-config.json file and make any {Environment.NewLine}" +
-                                                          "  necessary changes, then run Cooke again." +
-                                                             Environment.NewLine;
-
+        /// <summary>Exits the application gracefully.</summary>
+        /// <param name="exitMsg">The exit message that is displayed to the user.</param>
+        /// <param name="exitCode">The exit code.</param>
+        public static void ExitApp(string exitMsg, int exitCode = 0)
+        {
+            Console.WriteLine(exitMsg);
+            Environment.Exit(exitCode);
+        }
     }
-
 }

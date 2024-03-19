@@ -8,7 +8,7 @@
 //   Cooke/README.md
 // =============================================================================
 
-// b240319.0936
+// b240319.1327
 
 using Cooke;
 
@@ -16,15 +16,22 @@ namespace Namespace
 {
     internal static class Program
     {
-        /// <summary>Main entry point for the Cooke.</summary>
+        /// <summary>Main entry point for Cooke.</summary>
         /// <param name="args">Arguments passed via the command line.</param>
+        /// <remarks>
+        /// - If no arguments are passed, the application will generate all of the available documents.
+        /// - If any of the following arguments are passed, the application will create a specific document:
+        ///     <c>changelog</c>: Generate a CHANGELOG.md file
+        /// </remarks>
         private static void Main(string[] args)
         {
-            Console.WriteLine($"{Environment.NewLine}Cooke: Starting...");
+            const string configPath = "./cooke-config.json";
 
-            Utility.VerifyRequirements();
+            Utility.DisplayMsg($"{Environment.NewLine}Cooke: Starting...");
 
-            AppConfig appConfig = AppConfig.LoadConfigFile();
+            Utility.VerifyFramework(configPath);
+
+            AppConfig appConfig = AppConfig.Load(configPath);
 
             Thread.Sleep(1000); // This needs to be here to work?
 
@@ -34,24 +41,25 @@ namespace Namespace
             }
             else
             {
+                Utility.DisplayMsg($"Cooke: No argument passed, building all documentation...", appConfig.Verbose);
                 Changelog.Generate(appConfig);
             }
 
             Utility.Cleanup();
 
-            Console.WriteLine($"Cooke: Process complete! [v{appConfig.CookeVersion}b{appConfig.CookeBuild}]");
+            Utility.ExitApp($"Cooke: Process complete! [v{appConfig.AppVer}]");
         }
 
         /// <summary>Execute a complex command.</summary>
         /// <param name="appConfig">The Cooke configuration object.</param>
-        /// <param name="arguments">The command line arguments.</param>
+        /// <param name="args">The command line arguments.</param>
         /// <remarks>
         /// - Complex commands are commands that require additional arguments.
         /// - This method isn't used yet.
         /// </remarks>
-        private static void ExecuteComplex(AppConfig appConfig, string[] arguments)
+        private static void ExecuteComplex(AppConfig appConfig, string[] args)
         {
-            switch (arguments[0].ToLower())
+            switch (args[0].ToLower())
             {
                 case "changelog":
                     Changelog.Generate(appConfig);
@@ -60,6 +68,11 @@ namespace Namespace
                 case "releasenotes":
                     ReleaseNote.Generate(appConfig);
                     break;
+
+                case "reset":
+                    Utility.Reset(appConfig.AppVer);
+                    break;
+
 
                 default:
                     Console.WriteLine("Invalid command.");
