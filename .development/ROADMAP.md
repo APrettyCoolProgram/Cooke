@@ -8,3 +8,5 @@
 
 [INFO]
 [TYPE]
+
+* Add some of the Cooke folders to .gitignore
