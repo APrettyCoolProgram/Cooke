@@ -38,6 +38,8 @@ namespace Namespace
             }
 
             Utility.Cleanup();
+
+            Console.WriteLine($"Cooke: Process complete! [v{appConfig.CookeVersion}b{appConfig.CookeBuild}]");
         }
 
         /// <summary>Execute a complex command.</summary>

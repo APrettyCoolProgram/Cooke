@@ -42,7 +42,15 @@ namespace Cooke
         {
             if (!File.Exists(@"./Cooke-config.json"))
             {
+                Console.WriteLine("Cooke: Creating default configuration file...");
+
                 AppConfig.CreateDefaultConfigFile();
+
+                Console.WriteLine(FirstExecutionMessage());
+
+                Console.WriteLine($"Cooke: Process complete!");
+
+                Environment.Exit(0);
             }
         }
 
@@ -68,12 +76,28 @@ namespace Cooke
         /// <summary>Clean up Cooke.</summary>
         public static void Cleanup()
         {
-            Console.WriteLine($"Cooke: Cleaning up..{Environment.NewLine}");
+            Console.WriteLine($"Cooke: Cleaning up...");
 
             if (Directory.Exists("./temp"))
             {
                 Directory.Delete("./temp", true);
             }
         }
+
+        private static string FirstExecutionMessage() => Environment.NewLine +
+                                                         $"  ======= {Environment.NewLine}" +
+                                                         $"  WARNING {Environment.NewLine}" +
+                                                         $"  ======= {Environment.NewLine}" +
+                                                             Environment.NewLine +
+                                                         $"  It looks like this is the first time you are running Cooke {Environment.NewLine}" +
+                                                         $"  for this repository, so a default configuration file has {Environment.NewLine}" +
+                                                          "  been created for you." +
+                                                             Environment.NewLine +
+                                                             Environment.NewLine +
+                                                         $"  Please review the Cooke-config.json file and make any {Environment.NewLine}" +
+                                                          "  necessary changes, then run Cooke again." +
+                                                             Environment.NewLine;
+
     }
+
 }

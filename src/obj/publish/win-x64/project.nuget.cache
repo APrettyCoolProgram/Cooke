@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Oxxkf/6FiT0I9FfxkRM34XsvSb1wPCHWrb0p2h0HNesiko2w00Z0+c9WPT7hBb7QsPh+wCKyzBWVCAmQsKmsnw==",
+  "success": true,
+  "projectFilePath": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+    "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.3\\microsoft.netcore.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.3\\microsoft.aspnetcore.app.runtime.win-x64.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

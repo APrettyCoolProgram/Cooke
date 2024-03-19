@@ -5,6 +5,11 @@
 
 # CHANGELOG
 
+## Current development
+
+`UPDATED` CHANGELOG.md  
+`UPDATED` XML documentation  
+
 ## 0.0.2 - 2024-03-18
 
 `ADDED` .development/ROADMAP.md  
