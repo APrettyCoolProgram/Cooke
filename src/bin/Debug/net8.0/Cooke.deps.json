@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Cooke/1.0.0": {
+      "Cooke/0.1.0": {
         "runtime": {
           "Cooke.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "Cooke/1.0.0": {
+    "Cooke/0.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

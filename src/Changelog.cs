@@ -1,4 +1,4 @@
-﻿// b240319.1327
+﻿// b240319.1411
 
 namespace Cooke
 {
@@ -9,23 +9,23 @@ namespace Cooke
         /// <param name="appConfig">The object that contains the Cooke configuration settings.</param>
         public static void Generate(AppConfig appConfig)
         {
-            Utility.DisplayMsg($"{Environment.NewLine}Cooke: Generating CHANGELOG.md...");
+            Utility.DisplayMsg("Cooke: Generating CHANGELOG.md...");
 
             BuildRawData(appConfig.TempPath, appConfig.ChangelogGitCmd);
 
-            BuildRawChangelog(appConfig.TempPath, appConfig.Months, appConfig.ChangelogStartTag, appConfig.ChangelogEndTag);
+            BuildRawChangelog(appConfig.TempPath, appConfig.Months, appConfig.ChangelogStartTag, appConfig.ChangelogEndTag, appConfig.VerboseLog);
 
-            BuildChangelogMd(appConfig.TempPath, appConfig.ChangelogRawPath, appConfig.ChangelogRepoPath, appConfig.RepoName, appConfig.ChangelogIncludeName, appConfig.ChangelogKeepHistory);
+            BuildChangelogMd(appConfig.TempPath, appConfig.ChangelogRawPath, appConfig.ChangelogRepoPath, appConfig.RepoName, appConfig.ChangelogIncludeName, appConfig.ChangelogKeepHistory, appConfig.VerboseLog);
 
-            Utility.DisplayMsg($"Cooke: CHANGELOG.md file created.");
+            Utility.DisplayMsg("Cooke: CHANGELOG.md file created.");
         }
 
         /// <summary>Build the raw data from the git log command.</summary>
         private static void BuildRawData(string tempDir, string gitCmd)
         {
-            Utility.DisplayMsg("       Building raw data from git log...");
+            Utility.DisplayMsg("       Building changelog data from git log...");
 
-            Utility.ExeSysCmd("cmd.exe", $"{gitCmd} > {tempDir}changelog.raw");
+            Utility.ExeSysCmd("cmd.exe", $"{gitCmd} > {tempDir}changelog.gitlog");
         }
 
         /// <summary>Build the raw CHANGELOG.md file.</summary>
@@ -33,9 +33,9 @@ namespace Cooke
         /// <param name="months">A list of month abreviations.</param>
         /// <param name="startTag">The string that indicates the beginning of a keyword.</param>
         /// <param name="endTag">The string that indicates the end of a keyword.</param>
-        private static void BuildRawChangelog(string tempDir, List<string> months, string startTag, string endTag)
+        private static void BuildRawChangelog(string tempDir, List<string> months, string startTag, string endTag, bool verboseLog)
         {
-            Utility.DisplayMsg("       Building raw changelog data...");
+            Utility.DisplayMsg("       Building raw changelog content...");
 
             var version = "Current development";
 
@@ -51,7 +51,7 @@ namespace Cooke
 
             Thread.Sleep(1000); // This needs to be here to work? Also in Program.cs
 
-            using (StreamReader rawChangelogFile = new StreamReader($"{tempDir}changelog.raw"))
+            using (StreamReader rawChangelogFile = new StreamReader($"{tempDir}changelog.gitlog"))
             {
                 string rawLine;
 
@@ -99,16 +99,24 @@ namespace Cooke
                 }
             }
 
-            Utility.DisplayMsg("       Writing raw changelog data...");
+            Utility.DisplayMsg("       Writing raw changelog content...", verboseLog);
 
-            File.WriteAllText($"{tempDir}changelog.content", contentBody);
+            File.WriteAllText($"{tempDir}changelog.raw", contentBody);
         }
 
-        private static void BuildChangelogMd(string tempDir, string exportPath, string repoPath, string repoName, bool includeName, bool keepHistory)
+        /// <summary>Build the CHANGELOG.md file.</summary>
+        /// <param name="tempDir"></param>
+        /// <param name="exportPath"></param>
+        /// <param name="repoPath"></param>
+        /// <param name="repoName"></param>
+        /// <param name="includeName"></param>
+        /// <param name="keepHistory"></param>
+        /// <param name="verboseLog"></param>
+        private static void BuildChangelogMd(string tempDir, string exportPath, string repoPath, string repoName, bool includeName, bool keepHistory, bool verboseLog)
         {
             Utility.DisplayMsg("       Building CHANGELOG.md...");
 
-            var contentBody = File.ReadAllText($"{tempDir}changelog.content");
+            var contentBody = File.ReadAllText($"{tempDir}changelog.raw");
 
             var finalContent = BuildContentHeader() +
                                BuildChangelogTitle(repoName, includeName) +
@@ -118,15 +126,13 @@ namespace Cooke
 
             if (keepHistory)
             {
-                Utility.DisplayMsg("       Writing datestamped CHANGELOG.md...");
+                Utility.DisplayMsg("       Writing datestamped CHANGELOG.md...", verboseLog);
                 File.WriteAllText($"{exportPath}CHANGELOG_{dateTime}.md", finalContent);
             }
 
-            Utility.DisplayMsg($"       Writing CHANGELOG.md to {repoPath}CHANGELOG.md...");
+            Utility.DisplayMsg($"       Writing CHANGELOG.md to {repoPath}CHANGELOG.md...", verboseLog);
             File.WriteAllText($"{repoPath}CHANGELOG.md", finalContent);
         }
-
-
 
         /// <summary>Build the body of the CHANGELOG.md file.</summary>
         /// <param name="startTag">The string that indicates the beginning of a keyword.</param>
@@ -138,9 +144,9 @@ namespace Cooke
         private static string BuildBody(string startTag, string endTag, string commitStamp, string body, KeyValuePair<string, List<string>> verBlock)
         {
             var bodyHeader = Environment.NewLine +
-                            $"## {verBlock.Key}{commitStamp}" +
-                            Environment.NewLine +
-                            Environment.NewLine;
+                             $"## {verBlock.Key}{commitStamp}" +
+                             Environment.NewLine +
+                             Environment.NewLine;
 
             List<string> sortedList = new List<string>();
 
@@ -181,17 +187,18 @@ namespace Cooke
 
         /// <summary>Build the header of the CHANGELOG.md file.</summary>
         /// <returns>The CHANGELOG.md header.</returns>
-        private static string BuildContentHeader() => "<!-- " +
-                                                      Environment.NewLine +
-                                                      "    Changelog created using Cooke:" +
-                                                      Environment.NewLine +
-                                                      "    https://github.com/APrettyCoolProgram/Cooke" +
-                                                      Environment.NewLine +
-                                                      "-->" +
-                                                      Environment.NewLine +
-                                                      Environment.NewLine +
-                                                      "# CHANGELOG" +
-                                                      Environment.NewLine;
+        private static string BuildContentHeader() =>
+            "<!-- " +
+            Environment.NewLine +
+            "    Changelog created using Cooke:" +
+            Environment.NewLine +
+            "    https://github.com/APrettyCoolProgram/Cooke" +
+            Environment.NewLine +
+            "-->" +
+            Environment.NewLine +
+            Environment.NewLine +
+            "# CHANGELOG" +
+            Environment.NewLine;
 
         /// <summary>Build the CHANGELOG title.</summary>
         /// <param name="repoName"></param>
@@ -207,8 +214,9 @@ namespace Cooke
         /// <param name="header">The CHANGELOG.md header.</param>
         /// <param name="body">The generated CHANGELOG.md body</param>
         /// <returns>The final CHANGELOG.md content.</returns>
-        private static string BuildFinalContent(string header, string body) => header +
-                                                                               Environment.NewLine +
-                                                                               body;
+        private static string BuildFinalContent(string header, string body) =>
+            header +
+            Environment.NewLine +
+            body;
     }
 }

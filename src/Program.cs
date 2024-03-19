@@ -8,7 +8,7 @@
 //   Cooke/README.md
 // =============================================================================
 
-// b240319.1327
+// b240319.1411
 
 using Cooke;
 
@@ -41,7 +41,7 @@ namespace Namespace
             }
             else
             {
-                Utility.DisplayMsg($"Cooke: No argument passed, building all documentation...", appConfig.Verbose);
+                Utility.DisplayMsg("Cooke: No argument passed, building all documentation...", appConfig.VerboseLog);
                 Changelog.Generate(appConfig);
             }
 

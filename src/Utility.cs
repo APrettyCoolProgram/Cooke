@@ -1,4 +1,4 @@
-﻿// b240319.1327
+﻿// b240319.1411
 
 using System.Diagnostics;
 
@@ -50,6 +50,9 @@ namespace Cooke
             }
         }
 
+        /// <summary>Display a message to the user.</summary>
+        /// <param name="msg"></param>
+        /// <param name="verbose"></param>
         public static void DisplayMsg(string msg, bool verbose = true)
         {
             if (verbose)
@@ -58,9 +61,7 @@ namespace Cooke
             }
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>Reset Cooke to its default state.</summary>
         public static void Reset(string appVer)
         {
             Utility.DisplayMsg("Cooke: Resetting...");

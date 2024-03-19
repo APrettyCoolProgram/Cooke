@@ -1,4 +1,4 @@
-﻿// b240319.1327
+﻿// b240319.1411
 
 using System.Text.Json;
 
@@ -13,7 +13,7 @@ namespace Cooke
         public string AppVer { get; set; }
 
         /// <summary></summary>
-        public bool Verbose { get; set; }
+        public bool VerboseLog { get; set; }
 
         // Repository specific.
 
@@ -91,7 +91,7 @@ namespace Cooke
             AppConfig appConfig = new AppConfig
             {
                 AppVer          = "0.1.0+240319.1327",
-                Verbose         = false,
+                VerboseLog      = false,
                 RepoName        = "Cooke",
                 RepoURL         = "https://github.com/APrettyCoolProgram/Cooke",
                 DotGitPath      = "../",
@@ -135,7 +135,7 @@ namespace Cooke
 
             string configData = JsonSerializer.Serialize(appConfig, jsonFormat);
 
-            Utility.DisplayMsg("Cooke: Writing configuration file to disk...", appConfig.Verbose);
+            Utility.DisplayMsg("Cooke: Writing configuration file to disk...", appConfig.VerboseLog);
 
             File.WriteAllText(configPath, configData);
         }

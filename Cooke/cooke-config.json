@@ -1,6 +1,6 @@
 {
   "AppVer": "0.1.0\u002B240319.1327",
-  "Verbose": false,
+  "VerboseLog": false,
   "RepoName": "Cooke",
   "RepoURL": "https://github.com/APrettyCoolProgram/Cooke",
   "DotGitPath": "../",
@@ -24,7 +24,7 @@
   "ChangelogGitCmd": "git log --pretty=fuller",
   "ChangelogStartTag": "[",
   "ChangelogEndTag": "]",
-  "ChangelogKeepHistory": false,
+  "ChangelogKeepHistory": true,
   "ChangelogRepoPath": "../",
   "ReleaseNoteExportLocation": "./releasenotes/"
 }
