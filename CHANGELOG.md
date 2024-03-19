@@ -4,9 +4,11 @@
 -->
 
 # CHANGELOG
+# Cooke CHANGELOG
 
 ## Current development
 
+`ADDED` "Reset" command  
 `ADDED` Stop execution when a default configuration file is created.  
 `ADDED` Version/build number to output text.  
 `UPDATED` CHANGELOG.md  

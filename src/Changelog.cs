@@ -25,7 +25,7 @@ namespace Cooke
         {
             Utility.DisplayMsg("       Building raw data from git log...");
 
-            Utility.ExeSysCmd("cmd.exe", $"{gitCmd} > {tempDir}changelog-data.raw");
+            Utility.ExeSysCmd("cmd.exe", $"{gitCmd} > {tempDir}changelog.raw");
         }
 
         /// <summary>Build the raw CHANGELOG.md file.</summary>

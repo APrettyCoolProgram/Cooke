@@ -1,0 +1,30 @@
+{
+  "AppVer": "0.1.0\u002B240319.1327",
+  "Verbose": false,
+  "RepoName": "Cooke",
+  "RepoURL": "https://github.com/APrettyCoolProgram/Cooke",
+  "DotGitPath": "../",
+  "TempPath": "./temp/",
+  "Months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "ChangelogIncludeName": true,
+  "ChangelogRawPath": "./changelog/",
+  "ChangelogGitCmd": "git log --pretty=fuller",
+  "ChangelogStartTag": "[",
+  "ChangelogEndTag": "]",
+  "ChangelogKeepHistory": false,
+  "ChangelogRepoPath": "../",
+  "ReleaseNoteExportLocation": "./releasenotes/"
+}
