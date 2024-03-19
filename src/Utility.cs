@@ -1,39 +1,34 @@
-﻿// b240318.0844
+﻿// b240319.0915
 
-using System;
 using System.Diagnostics;
 
 namespace Cooke
 {
     internal class Utility
     {
-        /// <summary>
-        /// Executes a system command.
-        /// </summary>
+        /// <summary>Executes a system command.</summary>
         /// <param name="command">The system command.</param>
         /// <param name="argument">The command arguments.</param>
         /// <param name="terminate">Determines if the command should terminate after processing.</param>
         /// <remarks>
-        ///     - <c>processName</c> example: "cmd"
-        ///     - <c>processArgument</c> example: "git log"
+        /// - <c>processName</c> example: "cmd"
+        /// - <c>processArgument</c> example: "git log"
         /// </remarks>
-        /// <see href="https://gist.github.com/APrettyCoolProgram/9e0e3b02632ddb7f8a309783cc2cee10">This is A Pretty Cool Program Gist</see>
-        public static void ExecuteSystemCommand(string command,string argument,bool terminate = true)
+        /// <see href="https://gist.github.com/APrettyCoolProgram/9e0e3b02632ddb7f8a309783cc2cee10">View the gist</see>
+        public static void ExecuteSystemCommand(string command, string argument, bool terminate = true)
         {
             if (terminate)
             {
-                Process.Start(command,$"/c {argument}");
+                Process.Start(command, $"/c {argument}");
             }
             else
             {
-                Process.Start(command,argument);
+                Process.Start(command, argument);
             }
         }
 
 
-        /// <summary>
-        /// Verify the Cooke framework.
-        /// </summary>
+        /// <summary>Verify the Cooke framework.</summary>
         public static void VerifyRequirements()
         {
             Console.WriteLine($"Cooke: Verifying framework...");
@@ -42,9 +37,7 @@ namespace Cooke
             VerifyRequiredDirectories();
         }
 
-        /// <summary>
-        /// Verify the Cooke-config.json file exists, and create it if it does not.
-        /// </summary>
+        /// <summary>Verify the Cooke-config.json file exists, and create it if it does not.</summary>
         private static void VerifyAppConfigFile()
         {
             if (!File.Exists(@"./Cooke-config.json"))
@@ -53,9 +46,7 @@ namespace Cooke
             }
         }
 
-        /// <summary>
-        /// Verify the directory where Cooke data will be stored.
-        /// </summary>
+        /// <summary>Verify the directory where Cooke data will be stored.</summary>
         public static void VerifyRequiredDirectories()
         {
             var requiredDirectories = new List<string>
@@ -74,9 +65,7 @@ namespace Cooke
             }
         }
 
-        /// <summary>
-        /// Clean up Cooke.
-        /// </summary>
+        /// <summary>Clean up Cooke.</summary>
         public static void Cleanup()
         {
             Console.WriteLine($"Cooke: Cleaning up..{Environment.NewLine}");

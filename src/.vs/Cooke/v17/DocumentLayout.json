@@ -1,9 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\",
+  "WorkspaceRootPath": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\users\\cbanw\\github\\a pretty cool program\\cooke\\src\\cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:releasenote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|c:\\it\\github\\apcp\\cooke\\src\\cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5F3FB08A-DF95-41E9-A77B-BD360D7FD52E}|Cooke.csproj|solutionrelative:cooke.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -14,20 +34,139 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Utility.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Utility.cs",
+              "RelativeDocumentMoniker": "Utility.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Utility.cs",
+              "RelativeToolTip": "Utility.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAgwEMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:50:41.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Cooke",
-              "DocumentMoniker": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj",
+              "Title": "ReleaseNote.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\ReleaseNote.cs",
+              "RelativeDocumentMoniker": "ReleaseNote.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\ReleaseNote.cs",
+              "RelativeToolTip": "ReleaseNote.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:50:35.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Changelog.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Changelog.cs",
+              "RelativeDocumentMoniker": "Changelog.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Changelog.cs",
+              "RelativeToolTip": "Changelog.cs",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAuwLIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:49:07.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppConfig.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\AppConfig.cs",
+              "RelativeDocumentMoniker": "AppConfig.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\AppConfig.cs",
+              "RelativeToolTip": "AppConfig.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwAYAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:46:26.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:43:56.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cfff3162-9c8d-4244-b0a7-e3b39a968b24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{48f3bb34-bb3f-34de-a1c6-85b161a6542a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cooke.csproj",
+              "DocumentMoniker": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
               "RelativeDocumentMoniker": "Cooke.csproj",
-              "ToolTip": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj",
+              "ToolTip": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
               "RelativeToolTip": "Cooke.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-03-18T12:56:17.369Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 345,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

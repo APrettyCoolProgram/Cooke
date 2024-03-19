@@ -5,3 +5,6 @@
 * Callouts
 * Footer is external
 * Duplicates (`UPDATED` Documentation)
+
+[INFO]
+[TYPE]
