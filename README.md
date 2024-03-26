@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  ![BranchWarning](https://img.shields.io/badge/VERSION-0.1.0-white?style=for-the-badge)
+  ![BranchWarning](https://img.shields.io/badge/VERSION-0.1.1-white?style=for-the-badge)
 
 </div>
 
@@ -10,7 +10,7 @@
 
 Generate repository documentation.
 
-The current version of Cooke (0.1.0) generates a CHANGELOG.md file.
+The current version of Cooke (0.1.1) generates a CHANGELOG.md file.
 
 ## Installation
 
