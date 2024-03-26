@@ -1,0 +1,13 @@
+C:\IT\GitHub\APCP\Cooke\src\bin\Debug\net8.0\Cooke.exe
+C:\IT\GitHub\APCP\Cooke\src\bin\Debug\net8.0\Cooke.deps.json
+C:\IT\GitHub\APCP\Cooke\src\bin\Debug\net8.0\Cooke.runtimeconfig.json
+C:\IT\GitHub\APCP\Cooke\src\bin\Debug\net8.0\Cooke.dll
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.GeneratedMSBuildEditorConfig.editorconfig
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.AssemblyInfoInputs.cache
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.AssemblyInfo.cs
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.csproj.CoreCompileInputs.cache
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.sourcelink.json
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.dll
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\refint\Cooke.dll
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\Cooke.genruntimeconfig.cache
+C:\IT\GitHub\APCP\Cooke\src\obj\Debug\net8.0\ref\Cooke.dll
