@@ -1,9 +1,9 @@
-﻿// b240319.1411
+﻿// b240326.0914
 
 namespace Cooke
 {
     /// <summary>The Changelog object contains the methods to generate a CHANGELOG.md file.</summary>
-    public class Changelog
+    public static class Changelog
     {
         /// <summary> Generate the CHANGELOG.md file.</summary>
         /// <param name="appConfig">The object that contains the Cooke configuration settings.</param>
@@ -20,7 +20,9 @@ namespace Cooke
             Utility.DisplayMsg("Cooke: CHANGELOG.md file created.");
         }
 
-        /// <summary>Build the raw data from the git log command.</summary>
+        /// <summary>Build the raw data from the git log.</summary>
+        /// <param name="tempDir">The temporary data directory.</param>
+        /// <param name="gitCmd">The git command.</param>
         private static void BuildRawData(string tempDir, string gitCmd)
         {
             Utility.DisplayMsg("       Building changelog data from git log...");
@@ -29,7 +31,7 @@ namespace Cooke
         }
 
         /// <summary>Build the raw CHANGELOG.md file.</summary>
-        /// <param name="tempDir">The Cooke temporary folder.</param>
+        /// <param name="tempDir">The temporary data directory.</param>
         /// <param name="months">A list of month abreviations.</param>
         /// <param name="startTag">The string that indicates the beginning of a keyword.</param>
         /// <param name="endTag">The string that indicates the end of a keyword.</param>
@@ -105,13 +107,13 @@ namespace Cooke
         }
 
         /// <summary>Build the CHANGELOG.md file.</summary>
-        /// <param name="tempDir"></param>
-        /// <param name="exportPath"></param>
-        /// <param name="repoPath"></param>
-        /// <param name="repoName"></param>
-        /// <param name="includeName"></param>
-        /// <param name="keepHistory"></param>
-        /// <param name="verboseLog"></param>
+        /// <param name="tempDir">The temporary data directory.</param>
+        /// <param name="exportPath">The path for exported data.</param>
+        /// <param name="repoPath">The path to the repository.</param>
+        /// <param name="repoName">The name of the repository.</param>
+        /// <param name="includeName">Determines if the repository name is included in the CHANGELOG.md title.</param>
+        /// <param name="keepHistory">Determines if a historical record of CHANGELOG.md is kept.</param>
+        /// <param name="verboseLog">Determines if the logging is verbose.</param>
         private static void BuildChangelogMd(string tempDir, string exportPath, string repoPath, string repoName, bool includeName, bool keepHistory, bool verboseLog)
         {
             Utility.DisplayMsg("       Building CHANGELOG.md...");
@@ -202,7 +204,7 @@ namespace Cooke
         /// <param name="includeName"></param>
         /// <returns></returns>
         private static string BuildChangelogTitle(string repoName, bool includeName) => (includeName)
-            ? $"# {repoName} CHANGELOG" +
+            ? $"# {repoName} Changelog" +
               Environment.NewLine
             : "CHANGELOG" +
               Environment.NewLine;

@@ -1,4 +1,4 @@
-﻿// b240319.1411
+﻿// b240326.0959
 
 using System.Text.Json;
 
@@ -9,57 +9,57 @@ namespace Cooke
     {
         // Cooke specific.
 
-        /// <summary></summary>
+        /// <summary>The version of Cooke</summary>
         public string AppVer { get; set; }
 
-        /// <summary></summary>
+        /// <summary>Determines if logging is verbose.</summary>
         public bool VerboseLog { get; set; }
 
         // Repository specific.
 
-        /// <summary></summary>
+        /// <summary>Name of the repository Cooke will generate a CHANGLOG.md for.</summary>
         public string RepoName { get; set; }
 
-        /// <summary></summary>
+        /// <summary>URL of the repository Cooke will generate a CHANGLOG.md for.</summary>
         public string RepoURL { get; set; }
 
         // Common stuff.
 
-        /// <summary></summary>
+        /// <summary>Path to .git/</summary>
         public string DotGitPath { get; set; }
 
-        /// <summary></summary>
+        /// <summary>Temporary data directory.</summary>
         public string TempPath { get; set; }
 
-        /// <summary></summary>
+        /// <summary>List of months.</summary>
         public List<string> Months { get; set; }
 
         //CHANGELOG.md specific.
 
-        /// <summary></summary>
+        /// <summary>Determines if the Repository name is included in the CHANGELOG.md title.</summary>
         public bool ChangelogIncludeName { get; set; }
 
-        /// <summary></summary>
+        /// <summary>Path to raw Changelog data.</summary>
         public string ChangelogRawPath { get; set; }
 
-        /// <summary></summary>
+        /// <summary>The git command used.</summary>
         public string ChangelogGitCmd { get; set; }
 
-        /// <summary></summary>
+        /// <summary>The character that indicates the start of a changelog tag.</summary>
         public string ChangelogStartTag { get; set; }
 
-        /// <summary></summary>
+        /// <summary>The character that indicates the end of a changelog tag.</summary>
         public string ChangelogEndTag { get; set; }
 
-        /// <summary></summary>
+        /// <summary>Determines if historical changelogs are saved.</summary>
         public bool ChangelogKeepHistory { get; set; }
 
-        /// <summary></summary>
+        /// <summary>Path to the repository CHANGELOG.md.</summary>
         public string ChangelogRepoPath { get; set; }
 
         //RELEASE-NOTES.md specific
 
-        /// <summary></summary>
+        /// <summary>Path to the Release Note raw data.</summary>
         public string ReleaseNoteExportLocation { get; set; }
 
         /// <summary>Verifies that the configuration file exists, and creates one if it does not.</summary>
@@ -90,10 +90,10 @@ namespace Cooke
 
             AppConfig appConfig = new AppConfig
             {
-                AppVer          = "0.1.0+240319.1327",
+                AppVer          = "0.1.1",
                 VerboseLog      = false,
-                RepoName        = "Cooke",
-                RepoURL         = "https://github.com/APrettyCoolProgram/Cooke",
+                RepoName        = "YOUR-REPOSITORY-NAME",
+                RepoURL         = "YOUR-REPOSITORY-URL",
                 DotGitPath      = "../",
                 TempPath        = "./temp/",
                 Months =

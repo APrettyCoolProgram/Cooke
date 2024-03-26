@@ -5,6 +5,12 @@ namespace Cooke.Catalog
     ///<summary>Pre-created messages.</summary>
     internal static class Msg
     {
+        /// <summary>First execution message.</summary>
+        /// <remarks>
+        /// The first time Cooke is executed for a repository, there are a few housekeeping things we need to do. This
+        /// message will let the user know.
+        /// </remarks>
+        /// <returns>The message displayed to the user when Cooke is executed for the first time.</returns>
         public static string FirstExecution() => Environment.NewLine +
                                                  $"  ======= {Environment.NewLine}" +
                                                  $"  WARNING {Environment.NewLine}" +

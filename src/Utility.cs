@@ -62,6 +62,7 @@ namespace Cooke
         }
 
         /// <summary>Reset Cooke to its default state.</summary>
+        /// <param name="appVer">Version of Cooke.</param>
         public static void Reset(string appVer)
         {
             Utility.DisplayMsg("Cooke: Resetting...");

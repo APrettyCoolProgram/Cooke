@@ -1,4 +1,4 @@
-﻿// =============================== Version 0.1.0 ===============================
+﻿// =============================== Version 0.1.1 ===============================
 // Cooke: Generate various release notes and changelogs for your projects.
 // https://github.com/APrettyCoolProgram/Cooke
 // Copyright (c) A Pretty Cool Program. All rights reserved.
@@ -8,7 +8,7 @@
 //   Cooke/README.md
 // =============================================================================
 
-// b240319.1411
+// b240326.0934
 
 using Cooke;
 
