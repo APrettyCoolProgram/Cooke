@@ -195,9 +195,6 @@ namespace Cooke
             "    https://github.com/APrettyCoolProgram/Cooke" +
             Environment.NewLine +
             "-->" +
-            Environment.NewLine +
-            Environment.NewLine +
-            "# CHANGELOG" +
             Environment.NewLine;
 
         /// <summary>Build the CHANGELOG title.</summary>
