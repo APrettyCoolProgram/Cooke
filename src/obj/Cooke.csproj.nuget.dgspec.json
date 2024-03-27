@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {}
+    "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {}
   },
   "projects": {
-    "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {
+    "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {
       "version": "0.1.1",
       "restore": {
-        "projectUniqueName": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
+        "projectUniqueName": "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
         "projectName": "Cooke",
-        "projectPath": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
+        "projectPath": "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
         "packagesPath": "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\",
-        "outputPath": "C:\\IT\\GitHub\\APCP\\Cooke\\src\\obj\\",
+        "outputPath": "D:\\GitHub\\APCP\\Cooke\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\Chris.Banwarth\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
