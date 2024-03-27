@@ -2,7 +2,7 @@
 
 <div align="center">
 
- ![](./.github/Images/Logos/cooke-logo-128x128.png)
+ ![](./.github/Images/Logos/cooke-logo-256x256.png)
 
   ![Version](https://img.shields.io/badge/VERSION-0.1.1-white?style=for-the-badge)
 
