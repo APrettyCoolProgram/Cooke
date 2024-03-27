@@ -2,7 +2,7 @@
 
 <div align="center">
 
- ![](./.github/Images/Logos/cooke-logo_256x256.png)
+ ![](./.github/Images/Logos/cooke-logo.png)
 
 # Cooke
 
