@@ -4,8 +4,6 @@
 
  ![](./.github/Images/Logos/cooke-logo_256x256.png)
 
-
-
   ![BranchWarning](https://img.shields.io/badge/VERSION-0.1.1-white?style=for-the-badge)
 
 </div>
