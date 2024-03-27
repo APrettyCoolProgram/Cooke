@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {}
+    "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj": {
+    "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj": {
       "version": "0.1.1",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
+        "projectUniqueName": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj",
         "projectName": "Cooke",
-        "projectPath": "D:\\GitHub\\APCP\\Cooke\\src\\Cooke.csproj",
-        "packagesPath": "C:\\Users\\Chris.Banwarth\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\APCP\\Cooke\\src\\obj\\",
+        "projectPath": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\Cooke.csproj",
+        "packagesPath": "C:\\Users\\cbanw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cbanw\\GitHub\\A Pretty Cool Program\\Cooke\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Users\\Chris.Banwarth\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chris.Banwarth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\Chris.Banwarth\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Users\\cbanw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
