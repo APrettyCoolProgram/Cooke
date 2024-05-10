@@ -5,7 +5,7 @@
   ![](./.github/images/logos/cooke-logo-repository-readme.png)
 
   <h1>
-    Generate git repository documentation.
+    Generate git repository documentation
   </h1>
 
   <img src="https://img.shields.io/badge/status-active-darkgreen.svg">&nbsp;&nbsp;&nbsp;&nbsp;[![License](https://img.shields.io/github/license/aprettycoolprogram/Cooke)](https://www.apache.org/licenses/LICENSE-2.0)&nbsp;&nbsp;&nbsp;&nbsp;![.NET](https://img.shields.io/badge/.NET-8-blue)&nbsp;&nbsp;&nbsp;&nbsp;![GitHub release](https://img.shields.io/github/release/aprettycoolprogram/Cooke?label=latest%20release)
@@ -23,7 +23,7 @@ Currently, only CHANGELOG.md files are created.
 # Installation
 
 1. Download the current release
-2. Extract that file to `%REPOSITORY-NAME%/Cooke/`
+2. Extract to `%REPOSITORY-NAME%/Cooke/`
 
 # Configuration
 
@@ -43,8 +43,8 @@ Cooke has the following user-definable settings:
   This is a depreciated setting that will be removed in an upcoming release of Cooke, and should be ignored.
 
 - `KeepHistory`  
-  When set to **true**, Cooke will save timestamped copies of any documentation it creates, and save them to the ./history folder.  
-  When set to **false**, historical files will not be created.
+  **true** - Timestamped copies of documentation will be saved them to ./history  
+  **false** - Historical files will not be created.
 
 - `RepositoryName`  
   The name of the repository you are using Cooke with.
@@ -53,8 +53,8 @@ Cooke has the following user-definable settings:
   The URL of the repository you are using Cooke with.
 
 - `IncludeRepositoryNameInChangelog`  
-  When set to **true**, the CHANGELOG.md header will be "%RepositoryName% CHANGELOG.  
-  When set to **false** the CHANGELOG.md header will be "CHANGELOG".
+  **true** - the CHANGELOG.md header will be "%RepositoryName% CHANGELOG.  
+  **false** -the CHANGELOG.md header will be "CHANGELOG".
 
 - `ChangelogStartTag`  
   The character that indicates the start of a changelog item. By default this is `[`, but if you require another character, you can define it here.
@@ -65,17 +65,12 @@ Cooke has the following user-definable settings:
 - `ChangelogMdPath`  
   The path where the generated CHANGELOG.md file will be saved, relative to where Cooke is executed.
 
- for Cooke, and is created the first time you run Cooke.
-
-In general, you only need to modify the following entries:
-
 # Usage
 
 There are two components to using Cooke:
 
 1. Writing git -commit messages
 2. Executing Cooke
-
 
 ## Writing `git -commit` messages
 
