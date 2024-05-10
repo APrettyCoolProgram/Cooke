@@ -22,7 +22,7 @@ Currently, only CHANGELOG.md files are created.
 
 # Installation
 
-1. Download the [current release]()
+1. Download the current release
 2. Extract that file to `%REPOSITORY-NAME%/Cooke/`
 
 # Configuration
