@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooke", "Cooke.csproj", "{32510BBA-5131-46D4-A382-6DE30A90B9CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Du", "..\..\Du\src\Du.csproj", "{D8BB3427-41CA-485A-B5D5-C834A5A65423}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32510BBA-5131-46D4-A382-6DE30A90B9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32510BBA-5131-46D4-A382-6DE30A90B9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32510BBA-5131-46D4-A382-6DE30A90B9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32510BBA-5131-46D4-A382-6DE30A90B9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BB3427-41CA-485A-B5D5-C834A5A65423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BB3427-41CA-485A-B5D5-C834A5A65423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BB3427-41CA-485A-B5D5-C834A5A65423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BB3427-41CA-485A-B5D5-C834A5A65423}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD6D370A-FBDF-4BA2-B3D1-B059A109F905}
+	EndGlobalSection
+EndGlobal
