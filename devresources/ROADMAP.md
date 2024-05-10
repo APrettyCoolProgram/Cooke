@@ -1,24 +1,10 @@
 # ROADMAP
 
-## Features
+- Command to add things to .gitignore
+  - ./Cooke/
 
-* [INFO]
-* [TYPE]
-* Github issues
-* Release Notes
-* Add some of the Cooke folders to .gitignore
+- Add other special tags
+  - GitHub issues
 
+- Generate release notes
   
-## Updates
-
-* Header is external
-* Callouts
-* Footer is external
-
-## Tests
-
-* Verify that all configuration properties are written to the configuration file
-* Duplicates (`UPDATED` Documentation)
-
-## Fixes
-
