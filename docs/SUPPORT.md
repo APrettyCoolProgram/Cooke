@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>Repository: Support</h1>
+  <h1>Cooke: Support</h1>
 
 </div>
 
@@ -8,4 +8,4 @@ This project uses GitHub Issues to track bugs and feature requests. Please searc
 
 For new issues, file your bug or feature request as a new Issue.
 
-<sub>Last updated: 260514</sub>
+<sub>Last updated: 260612</sub>
